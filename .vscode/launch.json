@@ -4,8 +4,8 @@
         {
             "type": "pwa-chrome",
             "request": "launch",
-            "name": "People Counter (Live Console)",
-            "url": "http://127.0.0.1:5500/People_counter/index.html",
+            "name": "Black Jack (Live Console)",
+            "url": "http://127.0.0.1:5500/Black_Jack/index.html",
             "webRoot": "${workspaceFolder}/People_counter"
         }
     ]
