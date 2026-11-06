@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Serve Chrome Extension",
+            "type": "shell",
+            "command": "python3 -m http.server 5501 --bind 127.0.0.1 --directory \"${workspaceFolder}/Chrome_Extention\"",
+            "isBackground": true,
+            "problemMatcher": {
+                "owner": "custom",
+                "pattern": {
+                    "regexp": "^$",
+                    "message": 0
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "^.*$",
+                    "endsPattern": "^Serving HTTP on 127\\.0\\.0\\.1 port 5501"
+                }
+            }
+        }
+    ]
+}

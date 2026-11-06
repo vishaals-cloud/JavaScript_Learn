@@ -1,12 +1,15 @@
 {
     "version": "0.2.0",
     "configurations": [
+
         {
             "type": "pwa-chrome",
             "request": "launch",
-            "name": "Black Jack (Live Console)",
-            "url": "http://127.0.0.1:5500/Black_Jack/index.html",
-            "webRoot": "${workspaceFolder}/People_counter"
+            "name": "Chrome Extension UI (Live Console)",
+            "url": "http://127.0.0.1:5501/",
+            "webRoot": "${workspaceFolder}/Chrome_Extention",
+            "preLaunchTask": "Serve Chrome Extension",
+            "userDataDir": true
         }
     ]
 }
