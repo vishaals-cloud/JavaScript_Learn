@@ -1,0 +1,192 @@
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f6fa;
+    color: #1e293b;
+    padding: 25px;
+}
+
+button, input, select {
+    font: inherit;
+}
+
+
+/* Main Container */
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.header h1 {
+    font-size: 25px;
+    color: #172238;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+
+/* Buttons */
+.btn {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.btn-add,
+.btn-submit {
+    background: #2864e8;
+    color: white;
+}
+
+.btn-add:hover,
+.btn-submit:hover {
+    background: #1d4ed8;
+}
+
+.btn-delete {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.btn-delete:hover {
+    background: #fecaca;
+}
+
+
+/* Add Problem Form */
+.problem-form {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 0.9fr 1fr auto;
+    gap: 10px;
+    padding: 16px;
+    margin-bottom: 20px;
+
+    background: white;
+    border: 1px solid #e2e5eb;
+    border-radius: 9px;
+}
+
+.problem-form[hidden] {
+    display: none;
+}
+
+.problem-form input,
+.problem-form select {
+    width: 100%;
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid #dfe3ea;
+    border-radius: 6px;
+    outline: none;
+    background: white;
+    color: #344054;
+    font-size: 12px;
+}
+
+.problem-form input:focus,
+.problem-form select:focus {
+    border-color: #2864e8;
+}
+
+.btn-submit {
+    padding: 10px 20px;
+}
+
+
+/* Table */
+.table-container {
+    background: white;
+    border: 1px solid #e2e5eb;
+    border-radius: 9px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    min-width: 600px;
+}
+
+thead {
+    background: #f0f3f7;
+}
+
+th {
+    padding: 14px;
+    font-size: 13px;
+    color: #475467;
+    border-bottom: 1px solid #e2e5eb;
+}
+
+td {
+    padding: 10px 14px;
+    font-size: 13px;
+    border-bottom: 1px solid #edf0f3;
+    color: #344054;
+}
+
+tbody tr:nth-child(even) {
+    background: #f8f9fb;
+}
+
+tbody tr:hover {
+    background: #eef4ff;
+}
+
+.empty-row td {
+    text-align: center;
+    padding: 35px;
+    color: #98a2b3;
+}
+
+
+/* Responsive */
+@media (max-width: 850px) {
+    .problem-form {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    body {
+        padding: 15px;
+    }
+
+    .header {
+        align-items: flex-start;
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    .problem-form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .btn-submit {
+        grid-column: span 2;
+    }
+}

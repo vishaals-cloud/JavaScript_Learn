@@ -1,8 +1,90 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        
-    </body>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrackedON</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header class="header">
+            <h1>CrackedON</h1>
+
+            <div class="header-buttons">
+                <button type="button" class="btn btn-add">
+                    + Add Problem
+                </button>
+
+                <button type="button" class="btn btn-delete">
+                    Delete All
+                </button>
+            </div>
+        </header>
+
+
+        <!-- Add Problem Form (Initially Hidden) -->
+        <form class="problem-form" hidden>
+
+            <input type="text" id="problem-name" placeholder="Problem name" required>
+
+            <input type="text" id="platform-name" placeholder="Platform" required>
+
+            <select required id="difficulty-lvl">
+                <option value="" disabled selected>Difficulty</option>
+                <option value="Easy">Easy</option>
+                <option value="Medium">Medium</option>
+                <option value="Hard">Hard</option>
+            </select>
+
+            <input id="time-val" type="number" placeholder="Time (min)" min="1" required>
+
+            <select required id="status-opt">
+                <option value="" disabled selected>Status</option>
+                <option value="Solved">Solved</option>
+                <option value="Attempted">Attempted</option>
+                <option value="In Progress">In Progress</option>
+            </select>
+
+            <button type="submit" class="btn btn-submit">
+                Add
+            </button>
+
+        </form>
+
+
+        <!-- Problems Table -->
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Problem</th>
+                        <th>Platform</th>
+                        <th>Difficulty</th>
+                        <th>Time Taken</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody class="empty-row">
+                    <tr>
+                        <td colspan="5">No problems added yet.</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+    <script src="index.js"></script>
+</body>
 </html>

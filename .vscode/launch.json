@@ -2,12 +2,13 @@
     "version": "0.2.0",
     "configurations": [
 
+
         {
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Chrome Extension UI (Live Console)",
-            "url": "http://127.0.0.1:5501/",
-            "webRoot": "${workspaceFolder}/Chrome_Extention",
+            "url": "http://127.0.0.1:5500/",
+            "webRoot": "${workspaceFolder}/CrackedON",
             "preLaunchTask": "Serve Chrome Extension",
             "userDataDir": true
         }
